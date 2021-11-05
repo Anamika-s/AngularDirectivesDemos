@@ -1,0 +1,12 @@
+<p>directive-demo works!</p>
+<!-- <p *ngIf="condition"> </p> -->
+<p *ngIf="show"> This Paragraph will be displayed </p>
+
+<div *ngIf="show; else notShow">
+<p> 
+  This is the if part
+</p>
+</div>
+<ng-template #notShow>
+  <p> This is the else part</p>
+</ng-template>

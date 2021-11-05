@@ -1,0 +1,20 @@
+.box
+{
+ Width:100px;
+Height:100px;
+background-color: cadetblue;
+}
+.class1 
+{
+ background-color: yellow;
+}
+
+.class2
+{
+  width: 800px;
+}
+.class3
+{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 3px dotted dodgerblue ;
+}

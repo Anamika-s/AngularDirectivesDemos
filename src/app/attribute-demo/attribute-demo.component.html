@@ -1,0 +1,16 @@
+<h1> Attribute Directive Demo </h1>
+<div> DIV </div>
+<div [ngStyle]="{'background-color': 'green', 
+'border':'1px solid red',
+'display' :'inline-block',
+'width' : '100px',
+'height': '100px'}"> THIS IS A DIV  </div>
+
+<div [ngStyle]="myStyle"> THIS IS DIV 2 </div>
+
+<div class="box" [style.margin]="myProp1"> BOX DEMO </div>
+<div class="box" [style.margin]="isActive?myProp1:'5px'"> BOX DEMO </div>
+
+<div class="class1 class2 class3"> Class Demo </div>
+<div [ngClass]="'class1 class2 class3'"> Class Demo </div>
+<div [ngClass]="multiClasses"> Class Demo </div>

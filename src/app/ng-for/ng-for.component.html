@@ -1,0 +1,50 @@
+
+ <!-- <div *ngFor="let temp of records">
+   {{temp.name}}  
+   {{temp.marks}}
+   <img [src]="temp.img"/> 
+ </div> -->
+ 
+ <!-- <table *ngIf="records.length>0; else NoRecords" class="table table-hover">
+   <tr> 
+     <th> S.No </th>
+     <th> Name </th>
+     <th> Marks</th>
+     <th> Image</th> 
+   </tr>
+   <tr *ngFor="let x  of records; even  as i">
+      <td>{{i}} </td>
+      <td> {{x.name }}</td>
+      <td> {{x.marks }}</td>
+      <td> <img [src]="x.img" class="img-rounded"/></td>
+    </tr> 
+ </table>
+
+ <ng-template #NoRecords>
+   <h2> No Records </h2>
+ </ng-template> -->
+
+  <!-- <div *ngIf="records.length>0">
+ <ul *ngFor="let x of records">
+   <li *ngIf="x.country=='USA'" class="text-success"> {{x.name}} </li>
+   <li *ngIf="x.country=='UK'" class="text-danger"> {{x.name}} </li>
+   <li *ngIf="x.country=='INDIA'" class="text-primary"> {{x.name}} </li>
+ 
+  </ul>
+</div> -->
+<h2> Switch Demo </h2>
+<div *ngIf="records.length>0">
+  <ul *ngFor="let x of records" [ngSwitch]="x.country">
+    <li *ngSwitchCase="'USA'" class="text-success"> {{x.name}} </li>
+    <li *ngSwitchCase="'UK'" class="text-danger"> {{x.name}} </li>
+    <li *ngSwitchCase="'INDIA'" class="text-primary"> {{x.name}} </li>
+    <li *ngSwitchDefault class="text-warning"> {{x.name}} </li>
+  
+   </ul>
+
+   <h2> Attribute Directive Demo </h2>
+<div *ngIf="records.length>0">
+  <ul *ngFor="let x of records">
+    <li [ngStyle] ="{'background-color':getColor(x.country)}"> {{x.name}} </li> 
+    </ul>
+ </div>
