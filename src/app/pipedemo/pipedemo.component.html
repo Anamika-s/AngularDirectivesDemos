@@ -1,0 +1,12 @@
+<p>pipedemo works!</p>
+
+{{'Ajay' | lowercase}}
+{{'Ajay' | uppercase}}
+{{   todaydate | date:'shortTime' }}
+{{ 20.9 | currency }}
+<h1>Decimal Pipe</h1>
+<b>{{ 454.78787814 | number: '3.4-4' }}</b> // 3 is for main integer, 4 -4 are for integers to be displayed.
+<b>{{00.54565 | percent}}</b>
+<h1>Slice Pipe</h1>
+<b>{{months | slice:2:6}}</b> 
+// here 2 and 6 refers to the start and the end index

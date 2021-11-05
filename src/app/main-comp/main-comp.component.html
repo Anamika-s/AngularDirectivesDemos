@@ -1,0 +1,6 @@
+<h3> Within Main Component </h3>
+Hello {{name}}
+
+<app-child-comp [data]="name"> </app-child-comp>
+<button type="button" (click)="function1();"> Call Function1 </button>
+<app-child-comp (onclick)="functionthatwillbeinvokedfromchild($event)"> </app-child-comp>

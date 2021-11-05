@@ -1,0 +1,16 @@
+ <table class="table">
+   <tr> 
+     <th> Code </th>
+     <th> Name </th>
+     <!-- <th> Gender </th> -->
+     <th> Salary </th>
+     <th> Date of Birth </th>
+   </tr>
+   <tr *ngFor="let temp of employees">
+     <td> {{temp.code | uppercase}} </td>
+     <td> {{temp.name | gender:temp.gender }} </td>
+    <!-- <td> {{temp.gender}}</td> -->
+    <td> {{temp.annualSalary | currency:'INR':true}}</td>
+    <td> {{temp.dateOfBirth | date:"fullDate" | uppercase }}</td>
+   </tr>
+ </table>
